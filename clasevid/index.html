@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+</head>
+<body>
+    <main>
+        <section>
+            <!--Controls es un atributo vacio!
+            Muestra los controles de vid-->
+            <!--preload le dice a la pagina
+            que renderize el video al mismo
+            tiempo que el html. no al final
+            ESTO NO TIENE NADA QUE VER CON EL
+            REPORDUCCION AUTOMATICA
+            ES UNA MALA PRACTICA BTW-->
+            
+            <!--#t=segundo inicial, segundo final
+            es para que el video se reproduzca en
+            ese intervalo-->
+
+            <video
+                src="./video_prueba.mp4#t=10,36"
+                controls
+                preload="auto"
+            ></video>
+        </section>
+
+        <!--
+            Source nos permite pasarle varios
+            tipos de extensiones al video y que
+            el navegador carge el que entienda
+            EN CASO DE ENTENDER TODOS, CARGA EL
+            PRIMERO
+            ningun nav entiende mkv así que
+            carga el mp4
+        -->
+        <section>
+            <video controls preload="auto">
+                <source src="./videomk.mkv" />
+                <source src="./video4.mp4" />
+            </video>
+        </section>
+    </main>
+</body>
+</html>

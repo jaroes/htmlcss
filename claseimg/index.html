@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagenes</title>
+</head>
+<body>
+    <main>
+        <section>
+            <!--src es el atributo que indica path-->
+            <!--alt es una descripcion de la imagen
+            Cuando la imagen no se rendereé, mostrára
+            una descripcion. Es importante para la
+            accesibilidad on gente con problemas visuales-->
+            <img src="./pics/Little.jpg" alt="Es una imagen de un perro" />
+
+
+            <!--Muchas veces necesitamos una etiqueta contendora
+            para las img. Queremos redimensionarla o darle forma
+            
+            Se puede usar un div, pero semanticamente
+            no es correcto-->
+            <figure>
+                <img 
+                    src="./pics/Medium.jpg" 
+                    alt="Imagen dentro de un figure" 
+                />
+                <!--Es un nombre de pie de imagen
+                Se puede usar un div y un p, pero esto es más rapido-->
+                <figcaption>
+                    Esta es la descricion visual de una imagen
+                </figcaption>
+            </figure>
+        </section>
+    </main>
+</body>
+</html>
