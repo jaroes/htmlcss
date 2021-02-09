@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario</title>
+</head>
+<body>
+    <form action="">
+        <!--id es para ligar al label y name es la varname que
+        llegará por request. En este caso se enviará por get
+        Oseasé que saldrá en la barra de arriba-->
+        <label for="hora">
+            <span>Hora</span>
+            <input type="time" id="hora" name="hora" />
+        </label>
+        <label for="dia">
+            <span>Dia</span>
+            <input type="date" id="dia" name="dia" />
+        </label>
+        <!--Estas ultimas dos solo funcionan en chrome!!!-->
+        <label for="semana">
+            <span>Semana</span>
+            <input type="week" id="semana" name="semana" />
+        </label>
+        <label for="mes">
+            <span>Mes</span>
+            <input type="month" id="mes" name="mes" />
+        </label>
+        <!--Esto es para pedir todo de una vez-->
+        <label for="calandario">
+            <span>calendario completo</span>
+            <input type="datetime-local" id="calendario" name="calendario" />
+        </label>
+        <input type="submit" value="Enviar" />
+    </form>
+
+
+<!--Autocomplete le dirá al navegador que puede auto completar el input de forma individual
+podemos poner esto tambien en el propio form.
+PARA DESACTIVAR EL AUTO EN <form> es con "oof" y en <input> es "false"-->    
+    <form>
+        <label for="nombre">
+            <span>Nombre</span>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" required />
+        </label>
+        <label for="correo">
+            <span>Correo</span>
+            <input type="email" id="correo" name="correo" autocomplete="email" required />
+        </label>
+        <label for="pais">
+            <span>país</span>
+            <input type="text" id="pais" name="pais" autocomplete="country" required/>
+        </label>
+        <label for="cp">Codigo postal
+            <span>Codigo postal</span>
+            <input type="text" name="cp" id="cp" autocomplete="postal-code" required />
+        </label>
+        <label for="texto">
+            <span>No quiero nada</span>
+            <input type="text" name="texto" id="texto" autocomplete="false" required />
+        </label>
+    </form>
+
+
+    <form>
+        <!--Esta es una forma, pero es una mala practica-->
+        <select name="paises" id="paises">
+            <option value="Mex, Juanajuato">MEX, Juanajuato</option>
+            <option value="Mex, Juanajuato">MEX, Juanajuato</option>
+            <option value="Mex, Juanajuato">MEX, Juanajuato</option>
+            <option value="Mex, Juanajuato">MEX, Juanajuato</option>
+        </select>
+
+        <!--Para hacer selects es mejor usar un input de tipo list-->
+        <!--FORMA CORRECTA DE HACER UN SELECT-->
+        <!--Este permite poner cosas que no están en la lista
+        y podemos escribir un par de letras para llegar rapido
+        a donde queriamos estar!!!!!!!!!!!-->
+        <!--BUGGEADO EN FIREFOX-->
+        <input list="ciudades" />
+        <datalist id="ciudades">
+            <option value="MEX, JUANA"></option>
+            <option value="MEX, JUANA"></option>
+            <option value="MEX, JUANA"></option>
+            <option value="MEX, JUANA"></option>
+            <option value="MEX, JUANA"></option>
+        </datalist>
+    </form>
+
+
+    <input type="submit" value="Nanana" />
+    <button type="submit">VAlor aqui</button>
+
+</body>
+</html>
